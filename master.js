@@ -144,25 +144,16 @@ document.addEventListener("click", (e) => {
     if (theStatus !== true) {
       // Increase The Wrong Attempts
       wrongAttempts++;
-
       // Add Class Wrong On The Draw Element
       theDraw.classList.add(`wrong-${wrongAttempts}`);
-
-      // Play Fail Sound
-      document.getElementById("fail").play();
-
       if (wrongAttempts === 8) {
         endGame();
 
         lettersContainer.classList.add("finished");
       }
-    } else {
-      // Play Success Sound
-      document.getElementById("success").play();
     }
   }
 });
-
 // End Game Function
 function endGame() {
   // Create Popup Div
